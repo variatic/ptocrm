@@ -1,0 +1,22 @@
+# ----------------
+# Webstorm
+# ----------------
+.idea/
+
+# ----------------
+# NodeJs
+# ----------------
+.nodemonignore
+npm-debug.log
+node_modules/
+
+# ----------------
+# Bower
+# ----------------
+.bower-*/
+
+# ----------------
+# Dist files
+# ----------------
+dist/
+client/lib/

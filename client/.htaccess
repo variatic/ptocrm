@@ -1,0 +1,12 @@
+RewriteEngine On    
+RewriteCond %{HTTP:Accept-encoding} gzip
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteRule ^(.*)\.(html|css|js|data) $1\.$2\.gz [QSA]
+
+# Prevent double gzip and give the correct mime-type
+RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1,E=FORCE_GZIP]
+RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1,E=FORCE_GZIP]
+RewriteRule \.html\.gz$ - [T=text/html,E=no-gzip:1,E=FORCE_GZIP]
+RewriteRule \.data\.gz$ - [T=text/plain,E=no-gzip:1,E=FORCE_GZIP]
+
+Header set Content-Encoding gzip env=FORCE_GZIP

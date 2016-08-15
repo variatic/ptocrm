@@ -1,0 +1,38 @@
+<div class="panel">
+  <div class="panel__header">
+    <h1 class="panel__title">{{ $ctrl.title }}</h1>
+    <div class="panel__tools">
+      <div class="btn-group">
+        <button class="btn btn-primary btn-sm dropdown-toggle" type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false">
+          <i class="fa fa-plus"></i>&nbsp;&nbsp;Создать&nbsp;&nbsp;<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel__body">
+    <ul class="list list-unstyled documents__list">
+      <li class="list-item" ng-repeat="item in $ctrl.documents track by $index">
+        <div class="document-item">
+          <div class="document-item__date">{{ item.date | date:'dd.MM.yyyy'}}</div>
+          <div class="document-item__title">
+            <a class="document-item__link" href="#" ui-sref="document({ id: $index + 1 })">{{ item.title }}</a>
+          </div>
+          <div class="document-item__controls">
+            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-edit"></i></button>
+            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-remove"></i></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

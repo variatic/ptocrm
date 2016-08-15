@@ -1,0 +1,50 @@
+<div class="app">
+  <header class="header">
+    <a class="header__link" href="#" ui-sref="dashboard">Панель управления</a>
+    <a class="header__link" href="#" ui-sref="documents">Документы</a>
+  </header>
+  <main class="main">
+    <div class="sidebar">Навигация
+     <ul class="list list-unstyled">
+        <li>ОС №1: Аэропорт Шереметьево ВПП-3Б
+         <ul class="list list-unstyled">
+            <li>ИД: Водопропускные сооружения р.Клязьма</li>
+          </ul>
+        </li>
+        <li>ОС №2: Лента-207, Волгоград
+         <ul class="list list-unstyled">
+            <li>ИД: БКТП
+             <ul class="list list-unstyled">
+                <li>Реестр №1/1
+                 <ul class="list list-unstyled">
+                    <li>Акт скрытых работ №1/1-1</li>
+                    <li>Акт скрытых работ №1/1-2</li>
+                  </ul>
+                </li>
+                <li>Реестр №1/2
+                 <ul class="list list-unstyled">
+                    <li>Акт скрытых работ №1/2-1</li>
+                    <li>Акт скрытых работ №1/2-2</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>ИД: ГРЩУ
+             <ul class="list list-unstyled">
+                <li>Реестр №2/1
+                 <ul class="list list-unstyled">
+                    <li>Акт скрытых работ №1</li>
+                  </ul>
+                </li>
+                <li>Реестр №2/2</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>ОС №3: Лента, Ставрополь</li>
+      </ul>
+    </div>
+    <div class="content" ui-view></div>
+  </main>
+  <footer class="footer"></footer>
+</div>
